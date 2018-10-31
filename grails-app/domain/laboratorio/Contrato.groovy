@@ -10,12 +10,14 @@ class Contrato {
     Date fechaCaducidad
 
     Propiedad propiedad
-    static belongsTo = [cliente: Cliente]
+    Cliente duenio
+    Cliente cliente
+
 
     static constraints = {
 
       fecha(blank: false)
-      
+
 
     }
 }
