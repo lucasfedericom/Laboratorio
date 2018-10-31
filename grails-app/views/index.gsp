@@ -40,7 +40,7 @@
                     <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
                 </g:each>
             </ul>
-        </li> -->
+        <!-- </li> -->
     </content>
 
     <!-- <div class="svg" role="presentation">

@@ -9,8 +9,8 @@
         <a href="#create-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+                <li><a class="home" href="${createLink(uri: '/')}">Página Principal</a></li>
+                <li><g:link class="list" action="index">Lista de Usuarios<!--<g:message code="default.list.label" args="[entityName]" />--></g:link></li>
             </ul>
         </div>
         <div id="create-usuario" class="content scaffold-create" role="main">
@@ -27,7 +27,33 @@
             </g:hasErrors>
             <g:form resource="${this.usuario}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="usuario"/>
+
+                    <!-- FORMULARIO  -->
+
+                    <label>Tipo de usuario: </label>
+                		<select name ="tipoUsuario">
+                			<option>Administrador</option>
+                			<option>Operador</option>
+                		</select><br>
+
+                    <label>Username: </label>
+                    <input type = 'text' name = 'nombreUsuario'><br>
+
+                    <label>Nombre: </label>
+                    <input type = 'text' name = 'nombre'><br>
+
+                    <label>Apellido: </label>
+                    <input type = 'text' name = 'apellido'><br>
+
+                    <label>E-mail: </label>
+                    <input type = 'email' name = 'email'><br>
+
+                    <label>Constraseña: </label>
+                    <input type = 'password' name = 'contrasena'><br>
+
+
+                <!-- CORREGIR, NO GUARDA EN LA BBDD -->
+
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
