@@ -5,6 +5,8 @@ class Propiedad {
     String tipo
     String direccion
     String descripcion
+    BigDecimal precio
+    
 
     static belongsTo = [cliente: Cliente]
 

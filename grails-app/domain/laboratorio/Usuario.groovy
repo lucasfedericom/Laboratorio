@@ -13,10 +13,12 @@ class Usuario {
     static constraints = {
 
       // No sé cómo serían los demás constraints acá
-
-      nombre(blank: false)
-      apellido(blank: false)
-      email(blank: true, email:true)
+      tipoUsuario(inList: ['Administrador','Operador'])
+      nombreUsuario(minSize: 6)
+      nombre(maxSize: 100)
+      apellido(maxSize: 100)
+      contrasena(password: true)
+      email(email:true)
 
     }
 }

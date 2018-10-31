@@ -16,7 +16,7 @@ class Contrato {
 
     static constraints = {
 
-      fecha(blank: false)
+      
 
 
     }
