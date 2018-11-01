@@ -2,8 +2,8 @@ package laboratorio
 
 class Usuario {
 
-    String tipoUsuario
     String nombreUsuario
+    String tipoUsuario
     String nombre
     String apellido
     String contrasena

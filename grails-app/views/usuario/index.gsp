@@ -14,15 +14,15 @@
             </ul>
         </div>
         <div id="list-usuario" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1>Lista de Usuarios</h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <f:table collection="${usuarioList}" />
 
-            <div class="pagination">
+            <!-- <div class="pagination">
                 <g:paginate total="${usuarioCount ?: 0}" />
-            </div>
+            </div> -->
         </div>
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
-        <title>USUARIO CREADO!</title>
+        <title>Usuario en la BBDD</title>
     </head>
     <body>
         <a href="#show-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div id="show-usuario" class="content scaffold-show" role="main">
-            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
+            <h1>Usuario ingresado a la Base de Datos</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>

@@ -2,10 +2,10 @@ package laboratorio
 
 class Cliente {
 
+    String dni
     String nombre
     String apellido
     String sexo
-    BigInteger dni
     Date fechaNacimiento
     String domicilio
     String telefono
@@ -21,7 +21,7 @@ class Cliente {
 
         propiedades(blank: true)
         contratos(blank: true)
-        
+
         nombre(blank: false, maxSize: 100)
         apellido(blank: false, maxSize: 100)
         sexo(blank: false, inList:['F','M'])
