@@ -2,7 +2,9 @@ package laboratorio
 
 class PrincipalController {
 
-    def index() { }
+    def index() {
+      render(view: "/index")
+     }
 
     def altaUsuario(){
       [usuario: new Usuario()]

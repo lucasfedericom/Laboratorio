@@ -1,6 +1,13 @@
 package laboratorio
 
-class Usuario {
+import java.security.MessageDigest
+
+class Usuario implements Serializable {
+
+
+    private static final long serialVersionUID = 1
+
+
 
     String nombreUsuario
     String tipoUsuario
@@ -10,9 +17,55 @@ class Usuario {
     String email
 
 
+    def generateMD5_A(String s){
+          return MessageDigest.getInstance("MD5").digest(s.bytes).encodeHex().toString()
+      }
+
+      boolean equals(usu) {
+        is(usu) || (usu instanceof Usuario && usu.email == email)
+      }
+
+
+      String toString() {
+        nombreUsuario
+      }
+
+      // Set<Rol> getRoles() {
+
+      //               if (nombreUsuario!=null) {
+      //                   UsuarioRol.findAllByUsuario(this)*.rol
+      //               } else {
+      //                   new TreeSet<Rol>()
+      //               }
+      // }
+
+      //     Set<UsuarioRol> getUsuarioRol() {
+      //   UsuarioRol.findAllByUsuario(this)
+      // }
+
+      def beforeInsert() {
+        contrasena=generateMD5_A(contrasena)
+
+      }
+
+      // def beforeUpdate() {
+      //   if (isDirty('contrasena')) {
+      //     contrasena=generateMD5_A(contrasena)
+      //   }
+      // }
+
+      // def beforeValidate() {
+      //     nombreUsuario=nombreUsuario?.toUpperCase()
+      //     email=email?.toLowerCase()
+
+      // }
+
+
+
+
     static constraints = {
 
-      // No sé cómo serían los demás constraints acá
+      
       tipoUsuario(inList: ['Administrador','Operador'])
       nombreUsuario(minSize: 6)
       nombre(maxSize: 100)
