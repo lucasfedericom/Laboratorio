@@ -32,16 +32,20 @@
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="nav navbar-nav">
                             <li class="active" ><a href="/">Inicio</a></li>  
-                            <li ><g:link controller="Cliente" action="index">Clientes</g:link></li>
-                            <li><g:link controller="Consulta" action="index">Consulta</g:link></li>
+                            <li ><g:link controller="Propiedad" action="index">Propiedades</g:link></li>
+                            <li><g:link controller="Consulta" action="index">Formulario</g:link></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" >
-                        <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b><span class="caret"></span></a>
+                        <g:form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </g:form>
+                    </ul>
+                    <ul  class="school-options-dropdown text-center">
+                         <li class="dropdown btn-group">
+                            <a href="#" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            <b>Iniciar Sesión</b><span class="caret"></span></a>
+                        </li>
                     </ul>
                     
 
