@@ -16,41 +16,66 @@
 <body>
 
 <nav class="navbar navbar-default navbar-inverse" role="navigation" style="background-color: black">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/#">
 
-		            <asset:image src="icono4.png" alt="logo_inmobiliaria"/>
-                </a>
-            </div>
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <asset:image src="icono4.png" alt="logo_inmobiliaria"/>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="nav navbar-nav">
                             <li class="active" ><a href="/">Inicio</a></li>  
                             <li ><g:link controller="Propiedad" action="index">Propiedades</g:link></li>
                             <li><g:link controller="Consulta" action="index">Formulario</g:link></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" >
-                        <g:form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                        </g:form>
-                    </ul>
-                    <ul  class="school-options-dropdown text-center">
-                         <li class="dropdown btn-group">
+
+                        <li class="dropdown btn-group">
                             <a href="#" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                             <b>Iniciar Sesión</b><span class="caret"></span></a>
+                            <ul id="login-dp" class="dropdown-menu">
+                                <li>
+                                    <div class="row">
+                                                
+                                        <h1 style="color: white">Inicia Sesión con tu cuenta</h1>
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                 <label class="sr-only" for="exampleInputEmail2">Direccion de Correo Electronico</label>
+                                                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Direccion de Correo" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
+                                                <div class="help-block text-right"><a href="">¿Olvidaste la contraseña?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"> Mantenme conectado
+                                                    </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                            <div class="bottom text-center" style="color: red;">
+                                                        Nuevo aquí? <g:link controller="contacto" action="showRegistro">Registrate AQUI</g:link></a>
+                                            </div>
+                                    
+                                </li>
+                            </ul>
                         </li>
-                    </ul>
-                    
-
+                </ul>
         </div>
-    </nav>
+    </div>
+</nav>
    
 
     <g:layoutBody/>
