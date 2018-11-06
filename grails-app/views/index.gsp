@@ -3,6 +3,7 @@
 <head>
     <meta name="layout" content="main"/>
     <title>TRABAJO DE LABORATORIO</title>
+    <asset:stylesheet src="menu_index.css"/>
 </head>
 <body>
     <content tag="nav">
@@ -50,8 +51,11 @@
     </div> -->
 
     <div id="content" role="main">
+     
+
         <section class="row colset-2-its">
-            <img src="imagen_fondo1.jpg" style="width:100%;">
+            <h1>Inmobiliaria Express</h1>
+
 
             <!-- <h1>Welcome to Grails</h1>
 

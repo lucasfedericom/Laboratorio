@@ -1,0 +1,16 @@
+section{
+        background-image: url(imagen_fondo1.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        /* background-color: #66999; */
+}
+
+h1{
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: black;
+    color: antiquewhite;
+    font-size: 300%	
+
+}
